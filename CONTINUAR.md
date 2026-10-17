@@ -8,7 +8,8 @@ Data de l'última sessió: 2026-10-17
 - ✅ Entorn complet: intèrpret Python-Karel propi, 8 mons d'exercicis, editor de mons,
   manual, desat al navegador, fitxers `.py` i `.w`.
 - ✅ 80 proves en verd (`npm test`): 64 unitàries + 16 de navegador.
-- ⏳ Pendent: crear el repositori a GitHub i activar GitHub Pages (vegeu `README.md`).
+- ✅ Publicat: **https://tomeu-cd100.github.io/karel-aula/** (repositori públic, Pages des de `main`, carpeta `/`).
+- ✅ Comprovat a la web publicada: el laberint es resol sense errors.
 - ⏳ Pendent: provar-ho en un Chromebook real.
 - 💡 Idees per a més endavant: correcció automàtica (món objectiu), pintar caselles
   (`paint_corner`), més mons.
