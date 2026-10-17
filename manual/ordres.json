@@ -1,0 +1,25 @@
+[
+  { "categoria": "Accions", "nom": "move()", "descripcio": "Karel avança una casella cap on mira. Si hi ha una paret al davant, xoca i el programa s'atura.", "exemple": "move()\nmove()" },
+  { "categoria": "Accions", "nom": "turn_left()", "descripcio": "Karel gira 90° a l'esquerra, sense moure's de la casella.", "exemple": "turn_left()\nmove()" },
+  { "categoria": "Accions", "nom": "put_beeper()", "descripcio": "Karel deixa un beeper de la bossa a la casella on és. Cal que en tingui a la bossa.", "exemple": "put_beeper()\nmove()\nput_beeper()" },
+  { "categoria": "Accions", "nom": "pick_beeper()", "descripcio": "Karel recull un beeper de la casella i el guarda a la bossa. Cal que n'hi hagi.", "exemple": "if beepers_present():\n    pick_beeper()" },
+
+  { "categoria": "Condicions", "nom": "front_is_clear() / front_is_blocked()", "descripcio": "Diu si Karel pot avançar (no té cap paret al davant) o si no pot.", "exemple": "while front_is_clear():\n    move()" },
+  { "categoria": "Condicions", "nom": "left_is_clear() / left_is_blocked()", "descripcio": "Diu si hi ha pas (o paret) a l'esquerra de Karel.", "exemple": "if left_is_clear():\n    turn_left()\n    move()" },
+  { "categoria": "Condicions", "nom": "right_is_clear() / right_is_blocked()", "descripcio": "Diu si hi ha pas (o paret) a la dreta de Karel.", "exemple": "if right_is_blocked():\n    move()" },
+  { "categoria": "Condicions", "nom": "beepers_present() / no_beepers_present()", "descripcio": "Diu si a la casella de Karel hi ha algun beeper (o cap).", "exemple": "while beepers_present():\n    pick_beeper()" },
+  { "categoria": "Condicions", "nom": "beepers_in_bag() / no_beepers_in_bag()", "descripcio": "Diu si a Karel li queden beepers a la bossa (o cap).", "exemple": "while beepers_in_bag() and front_is_clear():\n    put_beeper()\n    move()" },
+  { "categoria": "Condicions", "nom": "facing_north() / not_facing_north()", "descripcio": "Diu si Karel mira al nord (amunt). També hi ha facing_east(), facing_south(), facing_west() i les versions not_facing_….", "exemple": "while not_facing_north():\n    turn_left()" },
+
+  { "categoria": "Estructures", "nom": "def nom():", "descripcio": "Defineix una ordre nova. Les línies de dins han d'anar sagnades (4 espais). Després la crides amb nom().", "exemple": "def turn_right():\n    turn_left()\n    turn_left()\n    turn_left()\n\nturn_right()\nmove()" },
+  { "categoria": "Estructures", "nom": "def main():", "descripcio": "Si defineixes main(), és el punt d'inici del programa: s'executa sola en prémer ▶ Executa.", "exemple": "def main():\n    move()\n    put_beeper()" },
+  { "categoria": "Estructures", "nom": "for i in range(n):", "descripcio": "Repeteix les línies de dins exactament n vegades.", "exemple": "for i in range(4):\n    put_beeper()\n    move()" },
+  { "categoria": "Estructures", "nom": "while condició:", "descripcio": "Repeteix les línies de dins mentre la condició sigui certa. Compte: si la condició no canvia mai, el bucle no s'acaba.", "exemple": "while front_is_clear():\n    move()" },
+  { "categoria": "Estructures", "nom": "if condició:", "descripcio": "Executa les línies de dins només si la condició és certa.", "exemple": "if no_beepers_present():\n    put_beeper()" },
+  { "categoria": "Estructures", "nom": "if … else:", "descripcio": "Tria entre dos camins segons la condició. Amb elif pots afegir-ne més.", "exemple": "if front_is_clear():\n    move()\nelse:\n    turn_left()" },
+  { "categoria": "Estructures", "nom": "not / and / or", "descripcio": "Combinen condicions: not inverteix, and demana que les dues siguin certes, or que ho sigui almenys una.", "exemple": "while front_is_clear() and not beepers_present():\n    move()" },
+
+  { "categoria": "Altres", "nom": "# comentari", "descripcio": "Tot el que hi ha després de # en una línia és un comentari: Karel no el llegeix.", "exemple": "# Karel avança dues caselles\nmove()\nmove()" },
+  { "categoria": "Altres", "nom": "pass", "descripcio": "No fa res. Serveix per deixar una funció o un bloc buit de moment.", "exemple": "def pendent():\n    pass" },
+  { "categoria": "Altres", "nom": "print(…)", "descripcio": "Escriu un missatge a la Sortida. Útil per saber per on passa el programa.", "exemple": "print(\"Començo!\")\nprint(front_is_clear())" }
+]

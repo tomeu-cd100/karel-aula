@@ -1,0 +1,10 @@
+Karel a l'aula
+Copyright 2026 Consell de Cent
+
+Inspirat en Karel the Robot (Richard E. Pattis) i en Stanford Karel (llenguatge i
+format de mons .w). L'intèrpret és propi.
+
+Inclou CodeMirror 5.61.1 (MIT) a vendor/codemirror/, amb el mode python i el
+complement comment.
+
+Fitxers propis: index.html, css/, js/, img/, mons/, manual/, tests/.

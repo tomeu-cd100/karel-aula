@@ -1,0 +1,18 @@
+[
+  { "id": "buit", "titol": "Món lliure", "fitxer": "buit.w",
+    "enunciat": "Un món buit de 8 × 8 per experimentar. Karel té beepers infinits a la bossa." },
+  { "id": "primer-pas", "titol": "1. Primer pas", "fitxer": "primer-pas.w",
+    "enunciat": "Fes que Karel vagi fins al beeper, el reculli i torni a la casella on ha començat, mirant a l'est." },
+  { "id": "diari", "titol": "2. Recull el diari", "fitxer": "diari.w",
+    "enunciat": "Karel és a casa. Ha de sortir per la porta, recollir el diari (el beeper) i tornar al lloc on era. Pista: defineix turn_right()." },
+  { "id": "fila", "titol": "3. Planta una fila", "fitxer": "fila.w",
+    "enunciat": "Posa un beeper a cada casella del carrer 1. El programa ha de funcionar encara que el món sigui més llarg o més curt." },
+  { "id": "escala", "titol": "4. Puja l'escala", "fitxer": "escala.w",
+    "enunciat": "Karel ha de pujar l'escala graó a graó i recollir el beeper de dalt de tot." },
+  { "id": "pila", "titol": "5. Trasllada la pila", "fitxer": "pila.w",
+    "enunciat": "A la casella (2, 1) hi ha una pila de beepers. Porta'ls tots a la casella (5, 1). No saps quants n'hi ha: fes servir while beepers_present()." },
+  { "id": "escacs", "titol": "6. Tauler d'escacs", "fitxer": "escacs.w",
+    "enunciat": "Omple el món amb beepers en caselles alternes, com les caselles negres d'un tauler d'escacs. La casella (1, 1) ha de tenir beeper." },
+  { "id": "laberint", "titol": "7. Surt del laberint", "fitxer": "laberint.w",
+    "enunciat": "Troba el beeper del laberint i recull-lo. Estratègia: camina sempre amb la mà dreta tocant la paret." }
+]

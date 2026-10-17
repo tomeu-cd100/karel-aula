@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karel a l'aula</title>
+<link rel="icon" href="img/karel.svg">
+<link rel="stylesheet" href="vendor/codemirror/codemirror.min.css">
+<link rel="stylesheet" href="css/app.css">
+<script src="vendor/codemirror/codemirror.min.js"></script>
+<script src="vendor/codemirror/python.min.js"></script>
+<script src="vendor/codemirror/closebrackets.min.js"></script>
+<script src="vendor/codemirror/matchbrackets.min.js"></script>
+<script src="vendor/codemirror/comment.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<div id="avis-desat" class="avis" hidden>La feina no es desarà en tancar.</div>
+<main class="app">
+  <section class="mon-panell" aria-label="Món de Karel">
+    <div class="barra">
+      <button id="executa" type="button" title="Ctrl+Enter">▶ Executa</button>
+      <button id="pas" type="button" title="Una acció de Karel cada clic">⏭ Pas</button>
+      <button id="atura" type="button" disabled>■ Atura</button>
+      <button id="reinicia" type="button">↺ Reinicia</button>
+      <label>Velocitat <input type="range" id="velocitat" min="0" max="5" step="1" value="3"></label>
+    </div>
+    <div class="barra">
+      <label class="tria-mon">Món <select id="mon"></select></label>
+    </div>
+    <div class="tela">
+      <canvas id="canvas" width="600" height="600"></canvas>
+    </div>
+    <div id="estat" class="estat"></div>
+    <p id="enunciat" class="enunciat"></p>
+  </section>
+  <section class="panells" aria-label="Panells">
+    <div class="pestanyes" role="tablist">
+      <button type="button" role="tab" data-pestanya="editor" aria-selected="true">Editor</button>
+      <button type="button" role="tab" data-pestanya="edita-mon" aria-selected="false">Món</button>
+      <button type="button" role="tab" data-pestanya="manual" aria-selected="false">Manual</button>
+    </div>
+    <div class="pestanya" id="pestanya-editor">
+      <textarea id="editor"></textarea>
+      <div class="sortida-cap">Sortida <button id="buida-sortida" type="button">Buida</button></div>
+      <pre id="sortida" class="sortida"></pre>
+      <div class="fitxers">
+        <button id="desa-py" type="button">💾 Desa .py</button>
+        <button id="obre-py" type="button">📂 Obre .py</button>
+        <input type="file" id="fitxer-py" accept=".py,.txt,text/plain" hidden>
+      </div>
+    </div>
+    <div class="pestanya" id="pestanya-edita-mon" hidden>
+      <p class="ajuda">Fes clic al món per canviar-lo. Els canvis es desen en aquest navegador.</p>
+      <fieldset class="eines">
+        <legend>Eina</legend>
+        <label><input type="radio" name="eina" value="paret" checked> Paret <small>(clic a la vora d'una casella)</small></label>
+        <label><input type="radio" name="eina" value="beeper"> Beeper <small>(clic posa, Maj+clic o clic dret treu)</small></label>
+        <label><input type="radio" name="eina" value="karel"> Karel <small>(clic el posa; clic sobre Karel el gira)</small></label>
+      </fieldset>
+      <div class="files-form">
+        <label>Columnes <input id="mon-cols" type="number" min="1" max="20"></label>
+        <label>Files <input id="mon-files" type="number" min="1" max="20"></label>
+        <button id="mon-mida" type="button">Canvia la mida</button>
+      </div>
+      <div class="files-form">
+        <label><input id="bossa-infinita" type="checkbox"> Bossa infinita</label>
+        <label>Beepers a la bossa <input id="bossa" type="number" min="0" max="999"></label>
+      </div>
+      <div class="files-form">
+        <button id="mon-buida" type="button">Buida el món</button>
+        <button id="mon-restaura" type="button">Restaura l'original</button>
+      </div>
+      <div class="fitxers">
+        <button id="desa-w" type="button">💾 Desa .w</button>
+        <button id="obre-w" type="button">📂 Obre .w</button>
+        <input type="file" id="fitxer-w" accept=".w,.txt,text/plain" hidden>
+      </div>
+    </div>
+    <div class="pestanya" id="pestanya-manual" hidden>
+      <input id="cerca-manual" type="search" placeholder="Cerca una ordre…" aria-label="Cerca una ordre">
+      <div id="manual"></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
